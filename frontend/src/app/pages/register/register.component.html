@@ -1,0 +1,134 @@
+<div class="container">
+  <div
+    class="container register-block justify-content-center"
+    style="overflow: hidden; height: 100vh"
+  >
+    <div class="row col-md-6 col-sm-12 col-xs-12" style="align-self: center">
+      <div class="card border-0 shadow rounded-3 my-5">
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-4 fw-medium">
+            Create your account
+          </h5>
+          <form (ngSubmit)="processRegister()" [formGroup]="$RegisterForm">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                formControlName="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+              <label for="username">Username</label>
+              <small
+                *ngIf="
+                  $RegisterForm.controls['username'].dirty &&
+                  $RegisterForm.controls['username'].invalid
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid username.
+              </small>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                formControlName="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <label for="password">Password</label>
+              <small
+                *ngIf="
+                  $RegisterForm.controls['password'].dirty &&
+                  $RegisterForm.controls['password'].invalid
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid password (minimum 8 characters).
+              </small>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                formControlName="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <label for="email">Email</label>
+              <small
+                *ngIf="
+                  $RegisterForm.controls['email'].dirty &&
+                  $RegisterForm.controls['email'].invalid
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid email.
+              </small>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                formControlName="phone"
+                name="phone"
+                placeholder="Phone"
+                required
+              />
+              <label for="phone">Phone</label>
+              <small
+                *ngIf="
+                  $RegisterForm.controls['phone'].dirty &&
+                  $RegisterForm.controls['phone'].invalid
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid phone number.
+              </small>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="date"
+                class="form-control"
+                id="birthDate"
+                formControlName="birthDate"
+                name="birthDate"
+                placeholder="Birth Date"
+                required
+              />
+              <label for="birthDate">Birth Date</label>
+              <small
+                *ngIf="
+                  $RegisterForm.controls['birthDate'].dirty &&
+                  $RegisterForm.controls['birthDate'].invalid
+                "
+                class="invalid-feedback"
+              >
+                Please enter a valid birth date.
+              </small>
+              <small *ngIf="errorMessage" class="text-danger">{{
+                errorMessage
+              }}</small>
+              <div class="d-grid form-floating mb-3">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-register p-3 text-uppercase fw-bold"
+                >
+                  Register
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

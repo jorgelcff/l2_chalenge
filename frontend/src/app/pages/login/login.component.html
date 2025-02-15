@@ -1,0 +1,75 @@
+<div
+  class="container login-block justify-content-center"
+  style="overflow: hidden; height: 100vh"
+>
+  <div class="row col-md-6 col-sm-12 col-xs-12" style="align-self: center">
+    <div class="card border-0 shadow rounded-3 my-5">
+      <div class="card-body p-4 p-sm-5">
+        <h5 class="card-title text-center mb-5 fw-light fs-4 fw-medium">
+          Access your account
+        </h5>
+        <form (ngSubmit)="processLogin()" [formGroup]="$LoginForm">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              formControlName="username"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <label for="username">Username</label>
+            <small
+              *ngIf="
+                $LoginForm.controls['username'].dirty &&
+                $LoginForm.controls['username'].invalid
+              "
+              class="invalid-feedback"
+            >
+              Please enter a valid username.
+            </small>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <label for="password">Password</label>
+            <small
+              *ngIf="
+                $LoginForm.controls['password'].dirty &&
+                $LoginForm.controls['password'].invalid
+              "
+              class="invalid-feedback"
+            >
+              Please enter the password.
+            </small>
+          </div>
+          <div class="d-grid form-floating mb-3">
+            <button
+              class="btn btn-primary btn-login p-3 text-uppercase fw-bold"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+          <div class="text-center">
+            <a
+              (click)="goToRegister()"
+              class="text-decoration-none"
+              style="cursor: pointer"
+            >
+              Don't have an account? Register
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

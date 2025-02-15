@@ -1,0 +1,202 @@
+@import "ngx-toastr/toastr";
+@import "primeicons/primeicons.css";
+body,
+html {
+  margin: 0;
+  font-family: "Poppins", "Lato", sans-serif;
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+button {
+  /*border-radius: 6px;*/
+}
+
+/*
+ Temporary Styling for auth screens.
+ No framework is added, you can add framework of your choice.
+ */
+.login-page,
+.register-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+
+  .card {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .card-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .form-group {
+          width: 100%;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+
+          small {
+            display: block;
+          }
+        }
+
+        label {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          font-size: 16px;
+          outline: none;
+        }
+
+        .form-submit {
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        button {
+          width: 100%;
+          height: 40px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #0069d9;
+          }
+        }
+
+        .invalid-feedback {
+          color: red;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.row {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.p-dropdown-items ul {
+  padding-left: 0 !important;
+}
+::ng-deep .p-dropdown-items ul {
+  padding-left: 0 !important;
+}
+
+ol,
+ul {
+  padding-left: 0rem !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  font-size: 16px;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  font-size: 16px;
+}
+
+.fit {
+  width: 1px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.p-button-group .p-button:last-of-type:not(:only-of-type),
+.p-button-group p-button:last-of-type:not(:only-of-type) .p-button,
+.p-buttonset .p-button:last-of-type:not(:only-of-type),
+.p-buttonset p-button:last-of-type:not(:only-of-type) .p-button {
+  height: 48px !important;
+}
+
+.p-button-group .p-button:first-of-type:not(:only-of-type),
+.p-button-group p-button:first-of-type:not(:only-of-type) .p-button,
+.p-buttonset .p-button:first-of-type:not(:only-of-type),
+.p-buttonset p-button:first-of-type:not(:only-of-type) .p-button {
+  height: 48px !important;
+}

@@ -1,0 +1,15 @@
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.login-block {
+  display: flex;
+}
+
+@media (max-width: 706px) {
+  .login-block {
+    display: block;
+  }
+}

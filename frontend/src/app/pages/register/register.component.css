@@ -1,0 +1,15 @@
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.register-block {
+  display: flex;
+}
+
+@media (max-width: 706px) {
+  .register-block {
+    display: block;
+  }
+}
